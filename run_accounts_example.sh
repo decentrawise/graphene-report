@@ -1,3 +1,5 @@
+#!/bin/bash
+
 rm ./output/*.csv
 
 yarn start account1

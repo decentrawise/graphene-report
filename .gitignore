@@ -2,3 +2,6 @@ node_modules
 .idea
 run_accounts.sh
 *.csv
+build
+es
+dist

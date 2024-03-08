@@ -1,10 +1,9 @@
 {
-  "name": "bitshares-report",
-  "version": "2.0.0",
-  "description": "Create a CSV export of content from the Bitshares Blockchain for use with Cointracking.info",
+  "name": "graphene-report",
+  "version": "1.0.0",
+  "description": "Create a CSV export of content from a Graphene Blockchain for use with Cointracking.info",
   "main": "./dist/index.js",
   "jsnext:main": "./es/index.js",
-  "author": "svk31",
   "license": "MIT",
   "dependencies": {
     "async": "^3.2.2",
@@ -17,7 +16,7 @@
     "@babel/core": "^7.16.7",
     "@babel/eslint-parser": "^7.16.5",
     "assert": "^2.0.0",
-    "bitsharesjs": "^6.0.0-rc1",
+    "@decentrawise/graphenejs": "^1.0.0",
     "browserify": "^17.0.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.6.0",
@@ -38,6 +37,7 @@
     "precommit": "pretty-quick --staged",
     "prebrowserify": "yarn run build",
     "browserify": "cross-env NODE_ENV=production browserify dist/index.js --standalone index -o build/index.js -d",
-    "postbrowserify": "cross-env NODE_ENV=production uglifyjs --compress --mangle --sequences --drop_console --mangle-props --screw-ie8 --output build/index.min.js -- build/index.js"
+    "postbrowserify": "cross-env NODE_ENV=production uglifyjs --compress --mangle --mangle-props --output build/index.min.js -- build/index.js",
+    "prepare": "yarn run build"
   }
 }
